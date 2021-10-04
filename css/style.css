@@ -1,0 +1,326 @@
+/*----------------------------- Global CSS ------------------------------*/
+
+.button {
+    font-size: 1rem;
+	padding: 1rem 3rem;
+	margin: 1rem 0rem;
+    height: 3rem;
+	font-weight: bold;
+    color: hsl(0, 100%, 100%);
+	background: linear-gradient(to right, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
+    border: 0rem;
+    border-radius: 3rem;
+}
+
+.button:hover {
+    filter: brightness(1.2) contrast(80%);
+}
+
+p {
+	color: hsl(233, 8%, 62%);
+	line-height: 2rem;
+}
+
+a:hover {
+    color: hsl(136, 65%, 51%);
+}
+
+/*-------------------------- For Mobile Screen --------------------------*/
+
+@media screen and (max-width:960px) {
+	body {
+		font-family: "Public Sans", sans-serif;
+		font-size: 1rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
+/*-------------------------- For Laptop Screen --------------------------*/
+
+@media screen and (min-device-width: 961px) {
+	body {
+		font-family: "Public Sans", sans-serif;
+		font-size: 1rem;
+        overflow-x: hidden;
+	}
+	
+	header {
+        padding: 0rem 15%;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.header-logo {
+		padding: 1rem 0rem;
+		margin: 1rem 0rem;
+	}
+
+	.menu {
+		display: flex;
+		justify-content: baseline;
+		align-items: center;
+	}
+
+	.menu a {
+		margin: 0rem 1rem;
+		color: hsl(233, 8%, 62%);
+	}
+
+	.menu a:hover {
+        margin-top: 0.25rem;
+		color: hsl(233, 26%, 24%);
+	}
+
+	.menu a:after{
+        content: "";
+		position: relative;
+		height: 0.25rem;
+        left: 0;
+        right: 0;
+        bottom: -1.25rem;
+		background: linear-gradient(to right, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
+		display: none;
+        
+	}
+
+	.menu a:hover::after {
+		display: block;
+	}
+
+	.hero {
+		padding: 12rem 15%;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+	}
+
+	.hero .hero-content {
+        width: 45%;
+		padding-right: 1.7%;
+	}
+
+	.hero-content h1 {
+		color: hsl(233, 26%, 24%);
+		font-size: 3rem;
+		line-height: normal;
+		padding-right: 15%;
+	}
+
+	.hero-content p {
+		padding-right: 30%;
+		padding-top: 1rem;
+		margin: 1rem 0rem;
+	}
+
+	.hero-background {
+		background-image: none;
+	}
+
+	.hero-background::before {
+		content: "";
+		position: absolute;
+		height: 107%;
+		background-image: url("../images/bg-intro-desktop.svg");
+		background-repeat: no-repeat;
+		background-position: -4.5rem -17rem;
+        background-size: 75%;
+		width: 100%;
+        top: 5rem;
+	}
+
+	.hero-background::after {
+		content: "";
+		position: absolute;
+		height: 200%;
+		background-image: url("../images/image-mockups.png");
+		background-repeat: no-repeat;
+		background-position: 9rem -9rem;
+        background-size: 50%;
+		width: 100%;
+        top: 5rem;
+        left: 53rem;
+	}
+
+	.features {
+		padding: 8rem 15%;
+		background-color: hsl(220, 16%, 96%);
+	}
+
+	.features h1 {
+		color: hsl(233, 26%, 24%);
+		font-size: 2rem;
+		line-height: normal;
+	}
+
+	.features p {
+		padding: 2rem 0rem;
+	}
+
+	.features-panel {
+        margin-top: 2rem;
+		display: flex;
+		justify-content: space-between;
+	}
+
+    .feature-card-first {
+        padding: 0rem 1rem 0rem 0rem;
+    }
+
+    .feature-card {
+        padding: 0rem 1rem;
+    }
+
+    .feature-card-last {
+        padding: 0rem 0rem 0rem 1rem;
+    }
+
+	.feature-card img, .feature-card-first img, .feature-card-last img {
+		padding: 1rem 0rem;
+	}
+
+	.feature-card h2, .feature-card-first h2, .feature-card-last h2  {
+		padding: 2rem 0rem;
+        font-size: 1.5rem;
+	}
+	
+	.feature-card p, .feature-card-first p, .feature-card-last p  {
+		padding: 0rem 0rem;
+		line-height: 2rem;
+	}
+
+    .articles {
+        padding: 8rem 15%;
+    }
+
+    .articles h1 {
+		color: hsl(233, 26%, 24%);
+		font-size: 2rem;
+		line-height: normal;
+        margin-bottom: 4rem;
+	}
+
+    .articles .articles-panel {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .article-card-first {
+        border-radius: 0.5rem;
+        margin: 0rem 1% 0rem 0rem;
+        overflow: hidden;
+    }
+
+    .article-card {
+        border-radius: 0.5rem;
+        margin: 0rem 1%;
+        overflow: hidden;
+    }
+
+    .article-card-last {
+        border-radius: 0.5rem;
+        margin: 0rem 0rem 0rem 1%;
+        overflow: hidden;
+    }
+
+    .article-card img, .article-card-first img, .article-card-last img {
+        height: 40%;
+        margin-bottom: 2rem;
+    }
+
+    .article-card h4, .article-card-first h4, .article-card-last h4 {
+        color: hsl(233, 26%, 24%);
+        font-size: 0.6rem;
+        line-height: normal;
+        margin: 0rem 10%;
+    }
+
+    .article-card h3, .article-card-first h3, .article-card-last h3 {
+        color: hsl(233, 26%, 24%);
+		font-size: 1rem;
+		line-height: 1.5;
+        margin: 1rem 10%;
+    }
+
+    .article-card h3:hover, .article-card-first h3:hover, .article-card-last h3:hover {
+        color: hsl(136, 65%, 51%);
+    }
+
+    .article-card p, .article-card-first p, .article-card-last p {
+        font-size: 0.8rem;
+        line-height: 1.2rem;
+        margin: 0rem 10%;
+    }
+
+    .footer {
+        padding: 3rem 15%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: hsl(233, 26%, 24%);
+    }
+
+    .footer .footer-logo {
+        margin: 0rem 0.5rem 3rem 0rem;
+    }
+
+    .footer a {
+        color: white;
+        margin: 0.5rem 0rem;
+    }
+
+    .footer a:hover {
+        color: hsl(136, 65%, 51%);
+    }
+
+    .logos-column {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .logos-column a:hover {
+        color: yellow;
+    }
+
+    .social-logos {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .social-logo-first {
+        margin-right: 0.5rem;
+    }
+
+    .social-logos .social-logo {
+        background-color: rgba(255, 0, 0, 0);
+        margin: 0rem 0.5rem;
+    }
+
+    .social-logo-last {
+        margin-left: 0.5rem;
+    }
+
+    .social-logo:hover, .social-logo-first:hover, .social-logo-last:hover {
+        filter: sepia(100%) contrast(50%) saturate(1200%) hue-rotate(423deg);
+
+    }
+
+    .links-column {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .copyright {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        margin-left: 20%;
+    }
+
+    .copyright button {
+        margin-left: 15%;
+    }
+}
